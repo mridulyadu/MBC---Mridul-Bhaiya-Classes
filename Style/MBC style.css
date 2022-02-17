@@ -40,7 +40,7 @@ section {
 }
 
 .heading {
-  background: url(../images/heading-bg.png) no-repeat;
+  background: url(..../Images/heading-bg.png) no-repeat;
   background-size: cover;
   background-position: center;
 }
