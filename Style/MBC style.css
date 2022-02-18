@@ -40,7 +40,7 @@ section {
 }
 
 .heading {
-  background: url(..../Images/heading-bg.png) no-repeat;
+  background: url(../Images/heading-bg.png) no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -1144,6 +1144,12 @@ bottom: 38rem;
     width: 100%;
     position: relative;
   }
+
+  .header .navbar ul li ul li{
+    width:100%;
+    position: relative;
+  }
+  
   .about .content h3 {
     font-size: 3rem;
   }
