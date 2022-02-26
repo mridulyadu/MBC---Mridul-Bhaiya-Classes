@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="../Images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../Images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../Images/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="../Images/favicon_io/site.webmanifest">
+    <title>MBC - Music</title>
+    <link rel="stylesheet" href="../Style/Music.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="../Images/Logo White.png" class="logo">
+            <ul>
+                <li><a href="#"></a>Home</li>
+                <li><a href="#"></a>About</li>
+                <li><a href="#"></a>Streaming</li>
+                <li><a href="#"></a>MBC</li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="left-col">
+                <h1>THE<br> REAL<br> SOUND</h1>
+            </div>
+            <div class="right-col">
+                <p> Click Here To Listen</p>
+                <img src="../Images/play.png" id="icon">
+            </div>
+        </div>
+    </div>
+    <audio id="mySong">
+        <source src="../Music/Doobey - Gehraiyaan.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+      var mySong = document.getElementById("mySong");
+      var icon =  document.getElementById("icon");
+
+      icon.onclick = function(){
+         if(mySong.paused){
+             mySong.play();
+             icon.src = "../Images/pause.png";
+         }else{
+            mySong.pause();
+             icon.src = "../Images/play.png";
+         }
+        
+      }
+
+
+
+    </script>
+</body>
+</html>
