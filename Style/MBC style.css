@@ -324,11 +324,11 @@ section {
 }
 
 .about-post #about-post p{
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   text-align: justify;
   padding: 1rem 0;
   color: #666;
-  line-height: 2.5;
+  line-height: 2.0;
 }
 
 .heading-channel h3{
