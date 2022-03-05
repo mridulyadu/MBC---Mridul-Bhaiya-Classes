@@ -1251,6 +1251,22 @@ bottom: 38rem;
   color: #fa1d86;
 }
 
+.wp-share {
+	display: block;
+	background: #25d366;
+	max-width: 200px;
+	padding: 8px 12px;
+	color: #fff;
+	font-weight: 700;
+	font-size: 17px;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	margin: auto;
+	border-radius: 10px;
+	transition: all .3s;
+}
+
 @media (max-width: 1200px) {
   html {
     font-size: 55%;
