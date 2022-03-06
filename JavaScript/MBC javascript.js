@@ -46,4 +46,3 @@ function hasClass(elem, className) {
       }
   }
 
-  
