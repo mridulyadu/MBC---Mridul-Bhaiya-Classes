@@ -1267,6 +1267,7 @@ bottom: 38rem;
 	transition: all .3s;
 }
 
+
 @media (max-width: 1200px) {
   html {
     font-size: 55%;
