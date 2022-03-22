@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+     <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-46B2C42KMB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-46B2C42KMB');
+</script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MBC - Mridul Bhaiya Classes Biology Class-X</title>
+    <title>Class 10 Science Ch-10 Our Environment</title>
     <link rel="apple-touch-icon" sizes="180x180" href="../Images/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../Images/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../Images/favicon_io/favicon-16x16.png">
@@ -56,91 +65,78 @@
     </header>
 
 <!-- header section ends -->
-
 <section class="heading">
     <h3>Class X</h3>
-    <p> <a href="../index.html">home >></a> <a href="./Class X index.html">Class X >></a>Biology</p>
+    <p> <a href="../index.html">home >></a> <a href="./Class X index.html">Class X >><a href="./Biology-Class-X.html">Biology >></a>Ch-10 : Our Environment >></p>
 </section>
 
-<section class="nav-bar-subject">
-    <div class="content-box">
-        <h3 id="writing">Biology</h3>
-      <a href="#"> <div class="chapter-box">
-           <div class="chapter-name">
-               <h6>Ch-06 : life processes</h6>
-               <p>videos. exercises. notes </p>
-           </div>
-           <div class="line">
-            <h2> | </h2>
+<div class="container">
+
+    <h1 class="heading"></h1>
+    <br><br>
+
+    <div class="accordion-container">
+
+        <div class="accordion active">
+            <div class="accordion-heading">
+                <h3>Notes</h3>
+                <i class="fas fa-angle-down"></i>
+            </div>
+            <p class="accordion-content">
+
+                <a href="../Notes/Class 10/Our Environment.pdf">Digital Notes (With Graphics)</a>
+                <br>
+                <a href="#">Formula sheet </a>
+                <br>
+                <a href="#">Revision Notes</a>
+            </p>
         </div>
-       </div> </a>
-    </div>
-   
-    <div class="content-box">
-       <a href="#"> <div class="chapter-box">
-            <div class="chapter-name">
-                <h6>Ch-07 : control and coordination </h6>
-                <p>videos. exercises. notes </p>
+        <div class="accordion active">
+            <div class="accordion-heading">
+                <h3>Practice Sheets</h3>
+                <i class="fas fa-angle-down"></i>
             </div>
-            <div class="line">
-                <h2> | </h2>
-            </div>
-        </div> </a>
-     </div>
-   
-     <div class="content-box">
-       <a href="#"> <div class="chapter-box">
-            <div class="chapter-name">
-                <h6>Ch-08 : how do organism reproduce </h6>
-                <p>videos. exercises. notes </p>
-            </div>
-            <div class="line">
-                <h2> | </h2>
-            </div>
-        </div> </a>
-     </div>
-   
-     <div class="content-box">
-       <a href="./Heredity-inner.html"> <div class="chapter-box">
-            <div class="chapter-name">
-                <h6>Ch-9 : heredity and evolution </h6>
-                <p>videos. exercises. notes </p>
-            </div>
-            <div class="line">
-                <h2> | </h2>
-            </div>
-        </div> </a>
-     </div>
-   
-     <div class="content-box">
-       <a href="environment.html"> <div class="chapter-box">
-            <div class="chapter-name">
-                <h6>Ch-15 : our environment</h6>
-                <p>videos. exercises. notes </p>
-            </div>
-            <div class="line">
-                <h2> | </h2>
-            </div>
-        </div> </a>
-     </div>
+            <p class="accordion-content">
+                <a href="#">Dpps</a>
+                <br>
+                <a href="#">Practice sheet</a>
+                <br>
+                <a href="#">advance question</a>
+                <br>
+                <a href="#">Mcq Questions</a>
+                <br>
+            </p>
+        </div>
 
-     <div class="content-box">
-        <a href="#"> <div class="chapter-box">
-             <div class="chapter-name">
-                 <h6>Ch-16 : sustainable management of natural resources</h6>
-                 <p>videos. exercises. notes </p>
-             </div>
-             <div class="line">
-                <h2> | </h2>
+        <div class="accordion active">
+            <div class="accordion-heading">
+                <h3>Quiz</h3>
+                <i class="fas fa-angle-down"></i>
             </div>
-         </div> </a>
-      </div>
-   
-   
-   </section>
-   <br><br>
+            <p class="accordion-content">
+                <a href="#">Quiz- Without time limit</a>
+                <br>
+                <a href="#">Quiz- With time limit</a>
+                <br>
+            </p>
+        </div>
 
+        <div class="accordion active">
+            <div class="accordion-heading">
+                <h3>Videos</h3>
+                <i class="fas fa-angle-down"></i>
+            </div>
+            <p class="accordion-content">
+                <a href="#">animations</a>
+                <br>
+                <a href="#">simulations</a>
+                <br>
+            </p>
+        </div>
+        <br><br>
 
+</div>
+</div>
 
 
 <!-- footer section starts  -->
@@ -190,7 +186,20 @@
 <!-- footer section ends -->
 
 <!-- custom js file link  -->
-<script src="../JavaScript/MBC javascript.js"></script>
+<script>
 
+    let accordions = document.querySelectorAll('.accordion-container .accordion');
+    
+    accordions.forEach(acco =>{
+        acco.onclick = () =>{
+            accordions.forEach(subAcco => { subAcco.classList.remove('active') });
+            acco.classList.add('active');
+        }
+    })
+    
+    
+    </script>
+
+<script src="../JavaScript/MBC javascript.js"></script>
 </body>
 </html>
