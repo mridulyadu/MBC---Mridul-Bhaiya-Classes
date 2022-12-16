@@ -412,6 +412,32 @@ section {
   bottom: 30px;
   }
 
+  .line{
+    padding: 10px;
+    color: #5343da;
+    font-size: 25px;
+    line-height:50px;
+    height: 46px;
+    text-align: start;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: absolute;
+    bottom: 30px;
+    }
+
+    .line1{
+      padding: 0px;
+      color: #5343da;
+      font-size: 50px;
+      line-height:50px;
+      height: 46px;
+      text-align: start;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      position: absolute;
+      bottom: 30px;
+      }
+
   .container{
   margin:20px auto;
   max-width: 700px;
