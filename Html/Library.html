@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBC - Mridul Bhaiya Classes</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../Images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../Images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../Images/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="../Images/favicon_io/site.webmanifest">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../Style/MBC style.css">
+
+    <style>
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+    
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f5f5f5;
+        }
+    
+        header {
+          background-color: #1b4f72;
+          color: #fff;
+          padding: 20px;
+          text-align: center;
+        }
+    
+        h1 {
+          font-size: 40px;
+        }
+    
+    
+    
+        .hero-section {
+          background-image: url("../Images/banner-bg.jpg");
+          background-size: cover;
+          background-position: center;
+          color: #fff;
+          text-align: center;
+          padding: 100px 0;
+        }
+    
+        .hero-section h2 {
+          font-size: 36px;
+          margin-bottom: 20px;
+          color:#2c2b2b
+        }
+    
+        .hero-section p {
+          font-size: 18px;
+          margin-bottom: 40px;
+          color: #474444;
+        }
+
+        .hero-section button {
+      padding: 10px 20px;
+      background-color: #1b4f72;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero-section button:hover {
+      background-color: #144168;
+    }
+    
+        .library-section {
+          background-color: #fff;
+          padding: 20px;
+          margin-bottom: 20px;
+        }
+
+        .library-section p {
+            font-size: 18px;
+        }
+    
+        .section-title {
+          font-size: 24px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+    
+        .carousel-container {
+          overflow: auto;
+        }
+    
+        .carousel {
+          display: flex;
+        }
+    
+        .carousel-item {
+          flex: 0 0 auto;
+          margin-right: 20px;
+        }
+    
+        .carousel-item:last-child {
+          margin-right: 0;
+        }
+    
+        .book-thumbnail,
+        .note-thumbnail {
+          width: 200px;
+          height: 250px;
+          background-color: #ccc;
+          margin-bottom: 10px;
+        }
+    
+        .book-details,
+        .note-details {
+          text-align: center;
+        }
+    
+        .book-title,
+        .note-title {
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+    
+        .book-author,
+        .note-author {
+          color: #666;
+          margin-bottom: 10px;
+        }
+    
+        .button {
+          padding: 8px 16px;
+          background-color: #1b4f72;
+          color: #fff;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+    
+        .button:hover {
+          background-color: #144168;
+        }
+    
+        .video-list {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+    
+        .video-card {
+          width: calc(33% - 10px);
+          margin-bottom: 20px;
+          background-color: #fff;
+          padding: 20px;
+        }
+    
+        .video-thumbnail {
+          position: relative;
+          width: 100%;
+          height: 0;
+          padding-bottom: 56.25%;
+          overflow: hidden;
+        }
+    
+        .video-thumbnail img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+    
+        .play-icon {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 48px;
+          color: #fff;
+          opacity: 0.8;
+        }
+    
+        .video-details {
+          text-align: center;
+          margin-top: 10px;
+        }
+    
+        .video-title {
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+    
+        .video-author {
+          color: #666;
+          margin-bottom: 10px;
+        }
+    
+        .search-banner {
+          background-color: #1b4f72;
+          color: #fff;
+          padding: 20px;
+          text-align: center;
+          position: relative;
+        }
+    
+        .search-banner h2 {
+          font-size: 28px;
+          margin-bottom: 10px;
+        }
+    
+        .search-banner p {
+          font-size: 18px;
+        }
+    
+        .search-bar {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 30px;
+        }
+    
+        .search-input {
+          padding: 10px;
+          width: 300px;
+          border: none;
+          border-radius: 4px;
+          font-size: 16px;
+          transition: box-shadow 0.3s ease;
+          background-color: #fff;
+          color: #333;
+        }
+    
+        .search-input:focus {
+          outline: none;
+          box-shadow: 0 0 4px rgba(27, 79, 114, 0.4);
+        }
+    
+        .search-button {
+          display: inline-block;
+          padding: 10px 20px;
+          background-color: #103147;
+          color: #fff;
+          border: none;
+          border-radius: 4px;
+          margin-left: 10px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+    
+        .search-button:hover {
+          background-color: #fa1d86;
+        }
+    
+        .banner-image {
+          position: absolute;
+          top: 50%;
+          right: 20px;
+          transform: translateY(-50%);
+          max-width: 150px;
+          max-height: 150px;
+        }
+    
+      
+      </style>
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header class="header">
+
+    <a href="../index.html" class="logo"> <i class="fas fa-graduation-cap"></i> MBC - Mridul Bhaiya Classes </a>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="../index.html">home</a></li>
+            <li><a href="MBC About index.html">about</a></li>
+            <li><a href="">Let's Study +</a>
+                <ul>
+                    <li><a href="Class IX index.html">Class IX</a></li>
+                    <li><a href="Class X index.html">Class X</a></li> 
+                    <li><a href="Class XI index.html">Class XI</a></li> 
+                    <li><a href="Class XII index.html">Class XII</a></li> 
+                </ul>
+            </li>
+            <li><a href="">Pages +</a>
+                <ul>
+                    <li><a href="Teachers.html">Teachers</a></li> 
+                    <li><a href="Blogs.html">Blogs</a></li> 
+                    <li><a href="MBC Student's Tool index.html">Student's Tool</a></li> 
+                </ul>
+            </li>
+            <li><a href="Contact index.html">Contact</a></li>
+            
+            </ul>
+
+        </nav>
+
+        
+    </header>
+
+<!-- header section ends -->
+
+<section class="heading">
+    <h3>Online Library</a></h3>
+    <p> <a href="../index.html">Home >> </a> Online Library</p>
+</section>
+
+<section class="hero-section">
+    <h2>Welcome to Our Online Library</h2>
+    <p>Explore a vast collection of books, notes, and concept videos.</p>
+    <button class="button">Start Reading</button>
+  </section>
+
+  <section id="books" class="library-section">
+    <h2 class="section-title">Featured Books</h2>
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="carousel-item">
+          <div class="book-thumbnail">
+            <img src="book1.jpg" alt="Book 1">
+          </div>
+          <div class="book-details">
+            <p class="book-title">Book 1</p>
+            <p class="book-author">Author 1</p>
+            <button class="button">Read</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="book-thumbnail">
+            <img src="book2.jpg" alt="Book 2">
+          </div>
+          <div class="book-details">
+            <p class="book-title">Book 2</p>
+            <p class="book-author">Author 2</p>
+            <button class="button">Read</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="book-thumbnail">
+            <img src="book3.jpg" alt="Book 3">
+          </div>
+          <div class="book-details">
+            <p class="book-title">Book 3</p>
+            <p class="book-author">Author 3</p>
+            <button class="button">Read</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="notes" class="library-section">
+    <h2 class="section-title">Featured Notes</h2>
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="carousel-item">
+          <div class="note-thumbnail">
+            <img src="note1.jpg" alt="Note 1">
+          </div>
+          <div class="note-details">
+            <p class="note-title">Note 1</p>
+            <p class="note-author">Author 1</p>
+            <button class="button">Download</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="note-thumbnail">
+            <img src="note2.jpg" alt="Note 2">
+          </div>
+          <div class="note-details">
+            <p class="note-title">Note 2</p>
+            <p class="note-author">Author 2</p>
+            <button class="button">Download</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="note-thumbnail">
+            <img src="note3.jpg" alt="Note 3">
+          </div>
+          <div class="note-details">
+            <p class="note-title">Note 3</p>
+            <p class="note-author">Author 3</p>
+            <button class="button">Download</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="videos" class="library-section">
+    <h2 class="section-title">Concept Videos</h2>
+    <div class="video-list">
+      <div class="video-card">
+        <div class="video-thumbnail">
+          <img src="video1.jpg" alt="Video 1">
+          <div class="play-icon"><i class="fas fa-play-circle"></i></div>
+        </div>
+        <div class="video-details">
+          <p class="video-title">Video 1</p>
+          <p class="video-author">Author 1</p>
+          <button class="button">Play</button>
+        </div>
+      </div>
+      <div class="video-card">
+        <div class="video-thumbnail">
+          <img src="video2.jpg" alt="Video 2">
+          <div class="play-icon"><i class="fas fa-play-circle"></i></div>
+        </div>
+        <div class="video-details">
+          <p class="video-title">Video 2</p>
+          <p class="video-author">Author 2</p>
+          <button class="button">Play</button>
+        </div>
+      </div>
+      <div class="video-card">
+        <div class="video-thumbnail">
+          <img src="video3.jpg" alt="Video 3">
+          <div class="play-icon"><i class="fas fa-play-circle"></i></div>
+        </div>
+        <div class="video-details">
+          <p class="video-title">Video 3</p>
+          <p class="video-author">Author 3</p>
+          <button class="button">Play</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="arrange" class="library-section">
+    <div class="search-banner">
+      <h2>Search Your Books from Our Library</h2>
+      <p>Find your favorite books and explore new ones!</p>
+      <div class="search-bar">
+        <input type="text" class="search-input" placeholder="Enter book title or author">
+        <button class="search-button">Search</button>
+      </div>
+      <img src="banner.png" alt="Banner" class="banner-image">
+    </div>
+  </section>
+
+
+    <!-- footer section starts -->
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>Explore</h3>
+            <a href="../index.html"><i class="fas fa-arrow-right"></i>Home</a>
+            <a href="./MBC About index.html"><i class="fas fa-arrow-right"></i>About</a>
+            <a href="./Blogs.html"><i class="fas fa-arrow-right"></i>Blogs</a>
+            <a href="./Channels.html"><i class="fas fa-arrow-right"></i>Channels</a>
+            <a href="./Teachers.html"><i class="fas fa-arrow-right"></i>Teachers</a>
+            <a href="./MBC Student's Tool index.html"><i class="fas fa-arrow-right"></i>Student's Tool</a>
+            <a href="./Contact index.html"><i class="fas fa-arrow-right"></i>Contact</a>
+        </div>
+
+        <div class="box">
+            <h3>Categories</h3>
+            <a href="./Class IX index.html"><i class="fas fa-arrow-right"></i>Class IX</a>
+            <a href="./Class X index.html"><i class="fas fa-arrow-right"></i>Class X</a>
+            <a href="./Class XI index.html"><i class="fas fa-arrow-right"></i>Class XI</a>
+            <a href="./Class XII index.html"><i class="fas fa-arrow-right"></i>Class XII</a>
+        </div>
+
+        <div class="box">
+            <h3>Quick Links</h3>
+            <a href="#"><i class="fas fa-arrow-right"></i>My Account</a>
+            <a href="#"><i class="fas fa-arrow-right"></i>Feedback</a>
+            <a href="#"><i class="fas fa-arrow-right"></i>Help Center</a>
+            <a href="#"><i class="fas fa-arrow-right"></i>Results</a>
+            <a href="#"><i class="fas fa-arrow-right"></i>News Letters</a>
+        </div>
+        <div class="box">
+            <h3>Follow us</h3>
+            <a href="https://www.facebook.com/mridul.yadu.92/"><i class="fab fa-facebook-f"></i>Facebook</a>
+
+            <a href="https://twitter.com/mridul_yadu"><i class="fab fa-twitter"></i>Twitter</a>
+
+            <a href="https://www.linkedin.com/in/mridul-yadu-9632781b2/"><i class="fab fa-linkedin"></i>Linkedin</a>
+
+            <a href="https://www.instagram.com/mridul_yadu/"><i class="fab fa-instagram"></i>Instagram</a>
+
+            <a href="https://in.pinterest.com/mridulyadu/"><i class="fab fa-pinterest"></i>Pinterest</a>
+            <a href="https://github.com/mridulyadu"><i class="fab fa-github"></i>Github</a>
+        </div>
+    </div>
+    <div class="credit"> Created by <span> Mridul Bhaiya </span>| all rights reserved!</div>
+</section>
+<!-- footer section ends -->
+<script src="../JavaScript/MBC javascript.js"></script>
+</body>
+</html>
